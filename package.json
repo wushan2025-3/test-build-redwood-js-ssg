@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "api",
+      "web"
+    ]
+  },
+  "scripts": {
+    "build": "yarn rw build web && rm -rf dist && cp -r web/dist dist"
+  },
+  "devDependencies": {
+    "@redwoodjs/core": "8.9.0",
+    "@redwoodjs/project-config": "8.9.0"
+  },
+  "eslintConfig": {
+    "extends": "@redwoodjs/eslint-config",
+    "root": true
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "prisma": {
+    "seed": "yarn rw exec seed"
+  },
+  "packageManager": "yarn@4.6.0"
+}

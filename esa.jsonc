@@ -1,0 +1,6 @@
+{
+  "name": "test-build-redwood-js-ssg",
+  "installCommand": "yarn install",
+  "buildCommand": "yarn rw build web && rm -rf dist && cp -r web/dist dist",
+  "assetsDirectory": "dist"
+}
